@@ -1,0 +1,365 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background :linear-gradient(rgba(8, 129, 8, 0.566) ,white);
+  color: #333;
+}
+
+/* Header Top Bar */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #68ce80;
+  color: white;
+  padding: 15px 40px;
+}
+
+.logo {
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+}
+.logo,img{
+  border-radius: 50%;
+  height: 40px;
+  
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.search-bar input {
+  padding: 8px 15px;
+  border-radius: 20px;
+  border: none;
+  width: 250px;
+  outline: none;
+}
+
+.search-bar button {
+  background-color: #588157;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.search-bar button:hover {
+  background-color: #a3b18a;
+}
+
+.user-links a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: 500;
+}
+
+/* Navigation Menu */
+.nav-menu {
+  display: flex;
+  justify-content:space-around;
+  font: bolder;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background-color: #dcede2;
+  padding: 10px 0;
+  gap: 30px;
+}
+
+.nav-menu a {
+  color: #000;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+  
+}
+
+.nav-menu a:hover {
+  color: #16e83d;
+}
+
+/* Slider */
+.slider {
+  background-image: url(/assets/images/Gemini_Generated_Image_uevv1ruevv1ruevv.png);
+  height: 300px;
+  width:auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color:rgb(16, 16, 16);
+  text-align: center;
+  background-repeat: no-repeat;
+ background-size: cover;
+}
+.slide{
+  justify-content: center;
+  position:absolute;
+  
+  
+}
+
+.slider h2 {
+  font-size: 2rem;
+  text-shadow: 0 2px 5px rgba(0,0,0,0.4);
+}
+
+.slider p {
+  font-size: 1.1rem;
+  margin-top: 10px;
+}
+
+/* Categories Section */
+.categories {
+  text-align: center;
+  margin: 50px auto;
+}
+
+.categories h2 {
+  color: #040404;
+  font-weight: 600;
+  margin-bottom: 25px;
+  text-transform: capitalize;
+}
+
+.cat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 25px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.cat {
+  background: white;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid #a3b18a;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.cat:hover {
+  background-color: #4be349;
+  color: white;
+  transform: translateY(-5px);
+}
+
+.cat p {
+  font-weight: 500;
+  text-transform: lowercase;
+}
+
+/* Footer */
+footer {
+  background-color: #5bcb70;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 0.9rem;
+  margin-top: 60px;
+}
+.slide{
+  height: 30%;
+  width: 100%;
+ 
+}
+.round {
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  
+}
+a{
+  text-decoration: none;
+  color: #000;
+}
+
+/* Add this to your /css/index.css file */
+
+.extended-footer {
+    background-color: #2c4a275f; /* Light background for the footer */
+    padding: 40px 20px;
+    border-top: 1px solid #eee;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive columns */
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto; /* Center the grid */
+}
+
+.footer-col h3 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 1.1em;
+}
+
+.footer-col p,
+.footer-col ul {
+    color:grey 800;
+    font-size: 0.9em;
+    line-height: 1.6;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 8px;
+}
+
+.footer-col ul li a {
+    text-decoration: none;
+    color: #666;
+    transition: color 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+    color: #007bff; /* Example hover color */
+}
+
+.social-icons a {
+    color: #007bff; /* Example social icon color */
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+/* Existing footer for copyright */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.8em;
+}
+/* --- Changes to product-grid to center items properly and use grid for layout --- */
+.product-grid {
+    display: grid;
+    /* This creates a responsive grid, no need for fixed width on card */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 25px;
+    /* Removed margin-left to allow the grid to fill the space */
+    width: 90%; 
+    margin: 0 auto; 
+    padding: 20px; /* Optional: for a little spacing around the grid */
+}
+
+/* --- Changes to product-card to remove fixed height and use flex for content management --- */
+.product-card {
+    background-color: rgb(252, 252, 252);
+    border-radius: 8px;
+    overflow: hidden;
+    /* Removed fixed width: 250px to fit grid column */
+    /* Removed fixed height: 200px to allow content to fully show */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    /* Use flexbox to stack image and details */
+    display: flex; 
+    flex-direction: column;
+    /* Ensure no unwanted margin from previous styles */
+    margin: 0; 
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* --- Change to card-image to ensure it has a set height and uses flex to fill space --- */
+.card-image {
+    /* Reduced image height to make space for details */
+    height: 150px; 
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    /* Allow the image to take up the available space at the top */
+    flex-shrink: 0; 
+}
+
+.sale-tag::before {
+    content: "SALE";
+    position: absolute; /* Changed relative to absolute to position inside the image container */
+    top: 10px;
+    left: 10px;
+    background-color: #ff4500;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+/* ... (Other styles remain the same) ... */
+
+.card-details {
+    padding: 15px;
+}
+
+.card-details h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.rating i {
+    color: gold;
+    font-size: 0.9rem;
+}
+
+.rating {
+    font-size: 0.8rem;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.price-action {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #2E8B57;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: #999;
+    font-size: 0.9rem;
+    margin-right: 5px;
+}
+
+.add-to-cart {
+    background-color: #2E8B57;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.add-to-cart:hover {
+    background-color: #3CB371;
+}

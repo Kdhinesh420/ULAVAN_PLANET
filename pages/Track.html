@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track Order - ULAVAN PLANET</title>
+    <link rel="stylesheet" href="/css/Track.css"> 
+    <style>
+        /* Order Item Details */
+        .order-summary {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .item-image {
+            width: 90px;
+            height: 90px;
+            background-color: #c9d5c4; /* Placeholder color for the product image */
+            margin-right: 15px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #4a5d43;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        
+        .item-info p {
+            margin: 0;
+            font-size: 0.9em;
+            color: #555;
+        }
+        
+        .price {
+            font-weight: bold;
+            color: #000;
+            font-size: 1.3em;
+            margin-top: 5px;
+        }
+
+        /* Tracking Timeline Structure */
+        .tracking-timeline {
+            position: relative;
+            padding-left: 20px;
+            margin-top: 20px;
+        }
+
+        /* Vertical Line */
+        .tracking-timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 10px;
+            width: 3px;
+            background-color: #ddd; /* Light gray line */
+        }
+
+        .step {
+            position: relative;
+            margin-bottom: 35px;
+            padding-left: 30px;
+        }
+
+        .circle {
+            position: absolute;
+            left: 0px;
+            top: 0;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: #ddd;
+            border: 3px solid white;
+            z-index: 1;
+        }
+
+        .step p {
+            margin: 0;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #888; /* Default status color */
+            font-size: 1.05em;
+        }
+        
+        /* Active/Done Step Styles */
+        .step-active .circle {
+            background-color: #4CAF50; /* Green for done steps */
+        }
+        
+        /* Current Step (Near By) */
+        .step-current .circle {
+            background-color: #ff9800; /* Orange/Yellow for current step */
+            box-shadow: 0 0 0 5px rgba(255, 152, 0, 0.2);
+        }
+        
+        .step-active p, .step-current p {
+            color: #000; /* Dark text for active/current status */
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="address.html" class="logo-section">
+            <div class="logo-circle"></div>
+            <h1>ULAVAN PLANET</h1>
+        </a>
+        <div class="nav-links">
+            <a href="address.html">Address</a>
+            <a href="track.html">Track Order</a>
+            <a href="#">Products</a>
+        </div>
+    </nav>
+
+    <div class="main-content">
+        <h2>📦 Track Order</h2>
+        
+        <div class="order-summary">
+            <div class="item-image">Product Image</div>
+            <div class="item-info">
+                <h3>MARIGOLD YELLOW SEEDS</h3>
+                <p>Size: 15 SEEDS | Quantity: 1</p>
+                <p class="price">₹ 154</p>
+            </div>
+        </div>
+
+        <div class="tracking-timeline">
+            <div class="step step-active">
+                <div class="circle"></div>
+                <p>CONFIRMED</p>
+            </div>
+            <div class="step step-active">
+                <div class="circle"></div>
+                <p>PENDING</p>
+            </div>
+            <div class="step step-active">
+                <div class="circle"></div>
+                <p>SHIPPED</p>
+            </div>
+            <div class="step step-current">
+                <div class="circle"></div>
+                <p>NEAR BY</p>
+            </div>
+            <div class="step">
+                <div class="circle"></div>
+                <p>DELIVERY ZONE</p>
+            </div>
+            <div class="step">
+                <div class="circle"></div>
+                <p>COMPLIED</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

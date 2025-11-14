@@ -1,0 +1,364 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif; /* Use your preferred font */
+}
+
+body {
+  background :linear-gradient(rgba(122, 194, 122, 0.63) ,white);    color: #333;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* --- Header/Navbar --- */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background-color: #68ce80;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #000000; /* A deep green color for Ulavan/Nature */
+    display: flex;
+    align-items: center;
+    
+    
+}
+.logo,img{
+    height: 60px;
+    border-radius: 50%;
+    gap: 19px;
+}
+
+.navbar a {
+    margin: 0 15px;
+    font-size: 1rem;
+    color: #121312;
+    transition: color 0.3s;
+    outline: none;
+}
+
+.navbar a:hover {
+    color: #2E8B57;
+}
+
+.nav-icons i {
+    margin-left: 15px;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+
+
+.hero-carousel {
+    height: 350px; /* Adjust height as needed */
+    position: relative;
+    overflow: hidden;
+ 
+}
+
+.carousel-item {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: rgb(217, 225, 224);
+    /* The video shows a stormy/dark background */
+    background-image: url('/top.webp'); /* Use a placeholder image/video frame here */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Dark overlay */
+}
+
+.carousel-content {
+    position: relative;
+    z-index: 10;
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.carousel-content i {
+    font-size: 2.5rem;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* --- Info Banner Section --- */
+.info-banner {
+    text-align: center;
+    padding: 20px;
+    background-image: url(/assets/images/vege\ seeds.png);/* Light, calming color */
+}
+
+.info-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #2E8B57;
+    margin-bottom: 5px;
+}
+
+.info-banner p {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+
+/* --- Product Grid Section --- */
+.product-section {
+    padding: 30px 5%;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 20px;
+}
+
+.section-header h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.see-all {
+    color: #2E8B57;
+    font-weight: bold;
+}
+
+.category-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.popular-title {
+    margin-top: 40px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.product-card {
+    background-color: rgb(252, 252, 252);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.card-image {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.sale-tag::before {
+    content: "SALE";
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #ff4500;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.card-details {
+    padding: 15px;
+}
+
+.card-details h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.rating i {
+    color: gold;
+    font-size: 0.9rem;
+}
+
+.rating {
+    font-size: 0.8rem;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.price-action {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #2E8B57;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: #999;
+    font-size: 0.9rem;
+    margin-right: 5px;
+}
+
+.add-to-cart {
+    background-color: #2E8B57;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.add-to-cart:hover {
+    background-color: #3CB371;
+}
+
+
+/* --- CTA/Footer Banner Section --- */
+.footer-banner {
+    display: flex;
+    height: 400px; /* Fixed height for the banner */
+    margin-top: 50px;
+    position: relative;
+}
+
+.text-content {
+    flex: 0 0 40%; /* 40% width for text */
+    background-color: #2E8B57; /* Deep green background */
+    color: white;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.tagline {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.text-content h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
+
+.contact-btn {
+    background-color: white;
+    color: #2E8B57;
+    padding: 12px 25px;
+    border-radius: 50px;
+    align-self: flex-start;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.contact-btn:hover {
+    background-color: #eee;
+}
+
+.image-content {
+    flex: 0 0 60%; /* 60% width for image */
+    background-size: cover;
+    background-position: center;
+    background-image: url('assets/footer_tomatoes.jpg'); /* Use a placeholder image here */
+}
+
+.made-in-bolt {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    color: white;
+    font-size: 0.8rem;
+    opacity: 0.7;
+}
+
+/* --- Media Queries for Responsiveness --- */
+@media (max-width: 900px) {
+    .product-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    .text-content h2 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .header {
+        flex-direction: column;
+        padding: 10px 5%;
+    }
+    .navbar {
+        margin: 10px 0;
+    }
+    .navbar a {
+        margin: 0 8px;
+        font-size: 0.9rem;
+    }
+
+    .footer-banner {
+        flex-direction: column;
+        height: auto;
+    }
+    .text-content, .image-content {
+        flex: 0 0 100%;
+    }
+    .image-content {
+        height: 200px;
+    }
+    .text-content {
+        text-align: center;
+        align-items: center;
+        padding: 30px;
+    }
+    .made-in-bolt {
+        position: static;
+        margin-top: 10px;
+        color: #ddd;
+    }
+}

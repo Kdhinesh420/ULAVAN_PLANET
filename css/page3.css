@@ -1,0 +1,452 @@
+/* ========================================= */
+/* --- ABOUT PAGE SPECIFIC STYLES --- */
+/* ========================================= */
+
+/* --- 1. Hero/Banner Section --- */
+.about-hero {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 2.5rem;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.5); /* Placeholder color if image is missing */
+    background-blend-mode: multiply; /* Darken the image */
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background-color: #68ce80;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #000000; /* A deep green color for Ulavan/Nature */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    
+}
+.logo,img{
+    height: 70px;
+    border-radius: 50%;
+
+}
+
+.navbar a {
+    margin: 0 15px;
+    font-size: 1rem;
+    color: #121312;
+    transition: color 0.3s;
+    text-decoration: none;
+    
+    
+
+}
+
+
+.navbar a:hover {
+    color: #d30326;
+    
+}
+
+.nav-icons i {
+    margin-left: 15px;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+
+
+/* --- 2. Main Content and Features Section --- */
+.main-about-content {
+    background-color: #f0f8e9; /* Very light green/off-white background */
+    padding: 50px 5%;
+}
+
+.about-flex-container {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.left-image-card {
+    flex: 1;
+    position: relative;
+}
+
+.main-farmer-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.experience-badge {
+    position: absolute;
+    bottom: -20px;
+    right: 20px;
+    background-color: #ffcc00; /* Yellow accent color */
+    color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 2rem;
+    font-weight: bold;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.right-text-features {
+    flex: 1.5;
+}
+
+.right-text-features h2 {
+    font-size: 2rem;
+    color: #2E8B57; /* Dark green text */
+    margin-bottom: 20px;
+}
+
+.right-text-features p {
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.feature-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    color: #333;
+}
+
+.feature-item i {
+    color: #2E8B57;
+    font-size: 1.2rem;
+    margin-right: 10px;
+}
+
+/* --- 3. Tags and Services Section --- */
+.tags-services-section {
+    background-color: #daf59e; /* Muted Green background */
+    padding: 50px 5%;
+    text-align: center;
+}
+
+.tag-line {
+    color: #2E8B57;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.section-heading {
+    font-size: 2.2rem;
+    color: #333;
+    margin-bottom: 40px;
+    font-weight: 700;
+}
+
+.service-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.service-card {
+    width: 200px;
+    text-align: center;
+}
+
+.icon-circle {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    border: 3px solid white; /* White ring effect */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.service-card h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333;
+}
+
+/* --- 4. Development and Future Plan Section --- */
+.development-plan-section {
+    background-color: #2E8B57; /* Dark green section */
+    color: white;
+    padding: 60px 5%;
+}
+
+.plan-content-wrapper {
+    display: flex;
+    gap: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.plan-left-text {
+    flex: 1;
+}
+
+.plan-left-text h3 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.plan-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+.plan-right-steps {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.step-item {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 5px solid #ffcc00; /* Yellow accent line */
+}
+
+.step-number {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffcc00;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.step-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.step-description {
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+/* --- 5. History and Growth Section --- */
+.history-growth-section {
+    background-color: white;
+    padding: 60px 5%;
+    text-align: center;
+}
+
+.history-title {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.stats-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 60px;
+}
+
+.stat-item {
+    text-align: center;
+    margin: 15px;
+}
+
+.stat-year {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #2E8B57;
+}
+
+.stat-description {
+    font-size: 1rem;
+    color: #555;
+    margin-top: 5px;
+}
+
+.leader-banner {
+    background-size: cover;
+    background-position: center;
+    background-image: url('assets/leader_banner.jpg'); /* Background image of wheat/field */
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Darken the image */
+    background-blend-mode: multiply;
+}
+
+/* --- 6. Customer Testimonials Section --- */
+.testimonials-section {
+    background-color: #f0f8e9; /* Light green/off-white background */
+    padding: 60px 5%;
+}
+
+.testimonials-section .section-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.testimonial-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    border-top: 5px solid #ffcc00; /* Yellow accent */
+}
+
+.testimonial-card i {
+    color: #ffcc00;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.testimonial-card p {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.customer-info {
+    display: flex;
+    align-items: center;
+}
+
+.customer-info img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.customer-info h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.customer-info p {
+    font-size: 0.8rem;
+    color: #777;
+    margin: 0;
+    font-style: normal;
+}
+
+/* --- Footer (Simple Version) --- */
+.footer-simple {
+    background-color: #333;
+    color: white;
+    padding: 30px 5%;
+    text-align: center;
+    border-top: 5px solid #ffcc00;
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.footer-logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.footer-content p {
+    font-size: 0.9rem;
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+.footer-links a {
+    margin: 0 10px;
+    font-size: 0.8rem;
+    color: #ccc;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #ffcc00;
+}
+
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 992px) {
+    .about-flex-container, .plan-content-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+    .right-text-features, .plan-left-text, .plan-right-steps {
+        flex: 1;
+        width: 100%;
+    }
+    .left-image-card {
+        order: 2; /* Put the image after the text on smaller screens if preferred */
+    }
+    .leader-banner {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .about-hero h1 {
+        font-size: 2rem;
+    }
+    .right-text-features h2 {
+        font-size: 1.5rem;
+    }
+    .feature-list {
+        grid-template-columns: 1fr;
+    }
+    .step-item {
+        text-align: left;
+    }
+    .history-title {
+        font-size: 1.5rem;
+    }
+    .stats-grid {
+        justify-content: space-between;
+    }
+}

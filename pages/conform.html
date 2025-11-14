@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> - ULAVAN PLANET</title>
+    <link rel="stylesheet" href="common-styles.css"> 
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        /* இந்தப் பக்கத்திற்கான பிரத்யேக ஸ்டைல்கள் (Common CSS-க்கு பிறகு) */
+        /* Header-க்கு கீழ் உள்ள main content-க்காக body-யின் margin-ஐ நீக்குகிறோம் */
+        body {
+            background-color: #e0e8dc;
+            /* Header-ஐ சேர்த்ததால், body-யின் display/align ஸ்டைல்களை நீக்கி விட்டேன். */
+            min-height: auto; 
+            margin: 0; 
+        }
+
+        .confirmation-page-container {
+            /* Header-க்கு கீழ் உள்ள பகுதியை மட்டும் மத்தியிலாக்க */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 50px 20px;
+            min-height: calc(100vh - 55px); /* Header-ன் உயரத்தை நீக்குதல் */
+        }
+        
+        .confirmation-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            text-align: center;
+            width: 90%;
+            max-width: 500px;
+        }
+        /* மற்ற Confirmation Card ஸ்டைல்கள்... */
+        .confirmation-icon {
+            font-size: 80px;
+            color: #4CAF50;
+            margin-bottom: 20px;
+        }
+
+        .confirmation-card h2 {
+            font-size: 2.2em;
+            color: #4CAF50;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .confirmation-card p.instruction {
+            color: #555;
+            font-size: 1.1em;
+            margin-bottom: 30px;
+        }
+
+        .transaction-details {
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            padding: 25px 30px;
+            margin-bottom: 30px;
+            border: 1px solid #eee;
+        }
+
+        .detail-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            font-size: 1.05em;
+        }
+
+        .detail-label {
+            color: #777;
+            font-weight: 500;
+            text-align: left;
+            width: 40%;
+        }
+
+        .detail-value {
+            color: #333;
+            font-weight: bold;
+            text-align: right;
+            width: 60%;
+        }
+
+        .detail-label.from, .detail-value.from { color: #e91e63; }
+        .detail-label.to, .detail-value.to { color: #2196f3; }
+        .detail-label.balance, .detail-value.balance { color: #4CAF50; font-size: 1.2em; }
+        .detail-label.amount, .detail-value.amount { color: #8bc34a; }
+        .detail-label.commission, .detail-value.commission { color: #ffeb3b; }
+        .detail-label.total, .detail-value.total { color: #4CAF50; font-size: 1.2em; }
+        
+        .detail-row:last-of-type {
+            border-top: 1px solid #eee;
+            padding-top: 15px;
+            margin-top: 15px;
+            margin-bottom: 0;
+            font-weight: bold;
+        }
+
+        .buttons-group {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .action-button {
+            padding: 12px 30px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+            font-weight: bold;
+        }
+
+        .action-button:hover {
+            transform: translateY(-2px);
+        }
+
+        .cancel-button {
+            background-color: #8c9c7f;
+            color: white;
+        }
+
+        .cancel-button:hover {
+            background-color: #7a8b6d;
+        }
+
+        .confirm-button {
+            background-color: #9c27b0; 
+            color: white;
+        }
+
+        .confirm-button:hover {
+            background-color: #7b1fa2;
+        }
+
+        /* மொபைல் ரெஸ்பான்சிவ் */
+        @media (max-width: 600px) {
+            .confirmation-card {
+                padding: 20px;
+                width: 95%;
+            }
+            .confirmation-icon {
+                font-size: 60px;
+            }
+            .confirmation-card h2 {
+                font-size: 1.8em;
+            }
+            .confirmation-card p.instruction {
+                font-size: 1em;
+            }
+            .detail-row {
+                flex-direction: column;
+                align-items: flex-start;
+                margin-bottom: 10px;
+            }
+            .detail-label, .detail-value {
+                width: 100%;
+                text-align: left;
+            }
+            .buttons-group {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .action-button {
+                width: 100%;
+            }
+        }
+        /* General & Typography */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* 🧭 HEADER (Logo, Web Name & Navigation Bar) Styles */
+.header-nav {
+    background-color: #6a805f; /* Dark Green Header */
+    padding: 10px 40px;
+    display: flex;
+    justify-content: space-between; /* Logo and Nav Links separated */
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    position: sticky; 
+    /* Header always stays on top */
+    
+}
+
+.logo-section {
+    display: flex;
+    
+    text-decoration: none;
+}
+
+.logo-circle {
+    width: 35px;
+    height: 35px;
+    background-color: white;
+    border-radius: 50%;
+    
+}
+
+.logo-section h1 {
+    color: white;
+    font-size: 1.6em;
+    font-weight: 500;
+    margin: 0;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    margin-left: 15px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    border-radius: 5px;
+}
+
+.nav-links a:hover {
+    background-color: #8c9c7f; /* Lighter Green Hover */
+}
+
+/* 🏠 Main Content Styles */
+.main-content {
+    padding: 40px;
+    max-width: 1000px;
+    margin: 30px auto;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Elements (Shared) */
+input[type="text"], 
+select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 18px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+
+.input-group-row {
+    display: flex;
+    gap: 15px;
+}
+
+.input-group-row input, 
+.input-group-row select {
+    flex: 1;
+}
+
+.continue-button {
+    background-color: #000;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    margin-top: 20px;
+    width: 50%;
+    transition: background-color 0.3s;
+}
+
+.continue-button:hover {
+    background-color: #333;
+}
+    </style>
+</head>
+<body>
+    <header class="header-nav">
+        <a href="address.html" class="logo-section">
+           <a href="/index.html"> <img class="logo-circle" src="/assets/images/logoooo.png" alt=""></a>
+            <h1>ULAVAN PLANET</h1>
+        </a>
+        <div class="nav-links">
+            <a href="address.html">Address</a>
+            <a href="track.html">Track Order</a>
+            <a href="confirm-order.html">Confirm Order</a>
+            <a href="#">Products</a>
+        </div>
+    </header>
+
+    <div class="confirmation-page-container">
+        <div class="confirmation-card">
+            <i class="material-icons confirmation-icon">check_circle_outline</i>
+            <h2>Conform</h2>
+            <p class="instruction">Order confirm </p>
+
+            <div class="transaction-details">
+                <div class="detail-row">
+                    <span class="detail-label from">From:</span>
+                    <span class="detail-value from">**** **** **** 4238 (Debit Card)</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label to">To:</span>
+                    <span class="detail-value to">6511 4545 8900 3211 (Credit Card)</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label balance">Total Balance:</span>
+                    <span class="detail-value balance">$58,890,000</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label amount">Amount:</span>
+                    <span class="detail-value amount">$890,000</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label commission">Commission:</span>
+                    <span class="detail-value commission">$890 (0.01%)</span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label total">In Total:</span>
+                    <span class="detail-value total">$890,890</span>
+                </div>
+            </div>
+
+            <div class="buttons-group">
+                <a href="/pages/Track.html"><button class="action-button cancel-button">track </button></a>
+                <a href="/pages/feedback.html"><button class="action-button confirm-button">feedback</button></a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

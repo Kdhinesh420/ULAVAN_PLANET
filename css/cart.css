@@ -1,0 +1,385 @@
+/* --- Global & Reset --- */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Light background for the whole page */
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* --- 1. Header Styling --- */
+.cart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    background-color: #556b2f; /* Olive Green color from the screenshot */
+    color: white;
+    font-weight: 500;
+    /* This gradient effect is for the top bar based on the screenshot, adjust as needed */
+    background:rgb(48, 154, 48);
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    font-size: 1.2em;
+}
+
+.logo-icon {
+    /* Placeholder for the circular logo icon */
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #f4f4f4; /* Light circle as seen in the image */
+    margin-right: 10px;
+}
+
+.user-info a {
+    margin-left: 20px;
+    padding: 5px 10px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.user-info i {
+    margin-right: 5px;
+}
+
+.badge {
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 1px 6px;
+    font-size: 0.7em;
+    margin-left: 5px;
+    line-height: 1;
+}
+
+/* --- NEW: Navigation Menu Styling --- */
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    background-color: #55ad7df0; /* Medium Sea Green for a fresh look */
+    padding: 10px 0;
+    font-weight: 500;
+}
+
+.nav-menu a {
+    color: white;
+    margin: 0 15px;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    padding: 5px 0;
+    transition: color 0.2s;
+}
+
+.nav-menu a:hover {
+    color: #f0fff0; /* Light hover color */
+}
+
+/* --- 2. Main Cart Section Styling --- */
+.cart-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #e0eee0; /* Lighter olive green/grey background */
+}
+
+.cart-title-section {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.cart-title-section h1 {
+    font-size: 2em;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.cart-title-section a {
+    color: #4682b4; /* Steel blue for a link */
+    font-weight: 500;
+}
+
+.cart-items-wrapper {
+    /* Centralizes the items block and sets up a container for the cart items */
+    max-width: 800px; /* Width of the central cart items block */
+    margin: 0 auto;
+    background-color: #f0fff0; /* Very light background for the cart list */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.cart-item:last-of-type {
+    border-bottom: none;
+}
+
+.item-image-area img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin-right: 20px;
+    border-radius: 4px;
+}
+
+.item-details {
+    flex-grow: 1;
+    text-transform: uppercase;
+}
+
+.item-name {
+    font-size: 1.1em;
+    font-weight: 600;
+    margin: 0 0 5px 0;
+}
+
+.item-details p {
+    margin: 3px 0;
+    font-size: 0.9em;
+    color: #555;
+}
+
+.item-price {
+    font-weight: 700;
+    color: #2e8b57; /* Sea Green for price */
+    margin-top: 5px !important;
+}
+
+.remove-btn {
+    color: #b22222; /* Firebrick red */
+    font-size: 0.9em;
+    cursor: pointer;
+    white-space: nowrap; /* Prevents wrapping */
+}
+
+.buy-now-btn {
+    display: block;
+    width: 200px;
+    margin: 20px auto 0;
+    padding: 12px 0;
+    background-color: #2e8b57; /* Buy Now Button Color */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-weight: 600;
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: background-color 0.2s;
+}
+
+.buy-now-btn:hover {
+    background-color: #3cb371;
+}
+
+/* --- 3. Suggestions Section Styling --- */
+.suggestions-section {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.suggestions-section h2 {
+    font-size: 1.5em;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-transform: lowercase; /* Matches the text in the image */
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+}
+
+.product-card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+}
+
+.product-image-container {
+    position: relative;
+    height: 180px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-image-container img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.sale-tag, .cold-sale-tag {
+    position: absolute;
+    top: 10px;
+    padding: 2px 5px;
+    font-size: 0.7em;
+    font-weight: 600;
+    color: white;
+    border-radius: 3px;
+    z-index: 10;
+}
+
+.sale-tag {
+    left: 10px;
+    background-color: red;
+}
+
+.cold-sale-tag {
+    left: 10px;
+    top: 35px;
+    background-color: #00bfff; /* Deep sky blue */
+}
+
+.wishlist-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #999;
+    cursor: pointer;
+}
+
+.add-to-cart-btn {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    width: 30px;
+    height: 30px;
+    background-color: #2e8b57;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.2em;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.product-details {
+    padding: 10px;
+}
+
+.product-name {
+    font-size: 0.8em;
+    min-height: 3.6em; /* Ensures card height consistency */
+    overflow: hidden;
+    margin: 0 0 5px 0;
+}
+
+.rating {
+    font-size: 0.7em;
+    color: gold;
+    margin-bottom: 5px;
+}
+
+.rating i {
+    color: gold;
+}
+
+.review-count {
+    color: #666;
+    margin-left: 5px;
+}
+
+.product-price {
+    font-size: 1em;
+    font-weight: 600;
+}
+
+.sale-price {
+    color: #b22222; /* Red for sale price */
+    margin-right: 5px;
+}
+
+.original-price {
+    text-decoration: line-through;
+    color: #999;
+    font-size: 0.8em;
+    font-weight: 400;
+}
+.extended-footer {
+    background-color: #2c4a275f; /* Light background for the footer */
+    padding: 40px 20px;
+    border-top: 1px solid #eee;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive columns */
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto; /* Center the grid */
+}
+
+.footer-col h3 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 1.1em;
+}
+
+.footer-col p,
+.footer-col ul {
+    color: #666;
+    font-size: 0.9em;
+    line-height: 1.6;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 8px;
+}
+
+.footer-col ul li a {
+    text-decoration: none;
+    color: #666;
+    transition: color 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+    color: #007bff; /* Example hover color */
+}
+
+.social-icons a {
+    color: #007bff; /* Example social icon color */
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+/* Existing footer for copyright */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.8em;
+}

@@ -1,0 +1,149 @@
+/* === Reset === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* === Body Background === */
+body {
+  height: 100vh;
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  background-image: url(/assets/032db963-22f6-4a01-8d4e-a4efcb8e5c4c.webp);
+  background-size: 100% 100%;
+  animation: bgMove 6s infinite alternate;
+  
+  
+  
+}
+body::after{
+  content: ' ';
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  background-color: #000000a0;
+    filter: blur(5px);
+ 
+}
+
+/* 
+@keyframes bgMove {
+  0% { background-position: left; }
+  100% { background-position: right; } */
+
+
+/* === Container === */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* === Login Box === */
+.login-box {
+  position: absolute;
+  z-index: 200;
+  background: rgba(21, 13, 13, 0.509);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 40px 45px;
+  width: 350px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  color: #fff;
+  animation: floatUp 1.2s ease-in-out;
+}
+
+@keyframes floatUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* === Heading === */
+.login-box h2 {
+  font-size: 28px;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+}
+
+/* === Input Fields === */
+.input-group {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px 10px;
+  font-size: 16px;
+  color: #fff;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  outline: none;
+  transition: 0.4s;
+}
+
+.input-group label {
+  position: absolute;
+  left: 10px;
+  top: 12px;
+  color: #ccc;
+  font-size: 16px;
+  pointer-events: none;
+  transition: 0.3s ease;
+}
+
+/* === Floating Label Effect === */
+.input-group input:focus ~ label,
+.input-group input:valid ~ label {
+  top: -10px;
+  font-size: 12px;
+  color: #f9c74f;
+}
+
+.input-group input:focus {
+  border-color: #f9c74f;
+}
+
+/* === Button === */
+button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(90deg, #f9c74f, #ffd166);
+  border: none;
+  border-radius: 25px;
+  color: #2e7d32;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+  background: linear-gradient(90deg, #ffd166, #f9c74f);
+  transform: scale(1.05);
+}
+
+/* === Signup Link === */
+.signup-link {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #ddd;
+}
+
+.signup-link a {
+  color: #f9c74f;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.signup-link a:hover {
+  text-decoration: underline;
+}

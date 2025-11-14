@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback - ULAVAN PLANET</title>
+    <link rel="stylesheet" href="common-styles.css"> 
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        /* Feedback Page பிரத்யேக ஸ்டைல்கள் */
+        
+        .main-content {
+            /* Feedback Card-ஐப் பக்கத்தின் நடுவில் வைக்க */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+            max-width: 700px; /* அகலத்தைக் கட்டுப்படுத்துதல் */
+            margin: 30px auto;
+        }
+
+        .feedback-card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            width: 100%;
+        }
+
+        .header-section {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .feedback-icon-box {
+            font-size: 50px;
+            color: #4CAF50; /* Green */
+            margin-right: 15px;
+        }
+        
+        .header-section h2 {
+            font-size: 2.2em;
+            margin: 0;
+            color: #333;
+            font-weight: 600;
+        }
+
+        .back-link {
+            display: block;
+            text-align: left;
+            margin-bottom: 15px;
+            color: #6a805f;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Form Layout */
+        .input-group-row {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 15px;
+        }
+
+        .input-group-row > div {
+            flex: 1;
+        }
+
+        .input-label {
+            display: block;
+            text-align: left;
+            font-weight: bold;
+            color: #555;
+            margin-bottom: 5px;
+        }
+        
+        /* Input Fields */
+        .feedback-card input[type="text"],
+        .feedback-card input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            margin-bottom: 0; /* input-group-row-ல் இடைவெளி இருப்பதால் */
+        }
+        
+        /* Experience/Rating Section */
+        .rating-section {
+            margin-top: 30px;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .rating-section p {
+            font-weight: bold;
+            color: #333;
+            font-size: 1.1em;
+            margin-bottom: 20px;
+        }
+
+        .emojis {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end; /* Emojis வரிசையாக இருக்க */
+            margin-bottom: 15px;
+            padding: 0 10px;
+        }
+
+        .emoji-option {
+            font-size: 30px;
+            cursor: pointer;
+            opacity: 0.6;
+            transition: opacity 0.3s;
+        }
+        
+        .emoji-option:hover {
+            opacity: 1;
+        }
+
+        .emoji-label {
+            font-size: 0.8em;
+            color: #777;
+            margin-top: 5px;
+        }
+        
+        /* Range Slider */
+        .range-slider {
+            width: 95%;
+            margin: 10px auto 25px;
+        }
+        
+        /* Textarea */
+        .comment-box {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            resize: vertical; /* பயனர் உயரத்தை மாற்ற அனுமதிக்க */
+            min-height: 100px;
+            font-size: 1em;
+        }
+        
+        /* Submit Button */
+        .submit-button {
+            width: 100%;
+            padding: 15px;
+            background-color: #26a69a; /* Teal/Cyan color for Submit */
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.2em;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 25px;
+            transition: background-color 0.3s;
+            text-align: center;
+            align-items: center;
+            text-decoration: none;
+        }
+        
+
+        .submit-button:hover {
+            background-color: #00897b;
+        }
+        /* 🧭 HEADER (Logo, Web Name & Navigation Bar) Styles */
+.header-nav {
+    background-color: #6a805f; /* அடர்த்தியான பச்சை தலைப்புப் பின்னணி */
+    padding: 10px 40px;
+    display: flex;
+    justify-content: space-between; /* லோகோவை இடதுபுறமும், லிங்க்குகளை வலதுபுறமும் வைக்க */
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    position: sticky; /* Header எப்போதும் மேலே இருக்க */
+    top: 0;
+    z-index: 1000;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo-circle {
+    width: 35px;
+    height: 35px;
+    background-color: white;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.logo-section h1 {
+    color: white;
+    font-size: 1.6em;
+    font-weight: 500;
+    margin: 0;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    margin-left: 15px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    border-radius: 5px;
+}
+
+.nav-links a:hover {
+    background-color: #8c9c7f; /* லேசான பச்சை ஹாவர் */
+}
+
+/* ... மீதமுள்ள பொதுவான ஸ்டைல்கள்... */
+    </style>
+</head>
+<body>
+    <header class="header-nav">
+        <a href="address.html" class="logo-section">
+            <div class="logo-circle"></div>
+            <h1>ULAVAN PLANET</h1>
+        </a>
+        <div class="nav-links">
+            <a href="address.html">Address</a>
+            <a href="track.html">Track Order</a>
+            <a href="feedback.html">Feedback</a> 
+            <a href="login.html">Login</a>
+        </div>
+    </header>
+
+    <div class="main-content">
+        <div class="feedback-card">
+            <a href="#" class="back-link">Back</a>
+            
+            <div class="header-section">
+                <i class="material-icons feedback-icon-box">check_box</i> <h2>Feed Back</h2>
+            </div>
+            
+            <form>
+                <div class="input-group-row">
+                    <div>
+                        <span class="input-label">Name</span>
+                        <input type="text" placeholder="Wildin Studio">
+                    </div>
+                    <div>
+                        <span class="input-label">Contact Number</span>
+                        <input type="text" placeholder="+91 00000 00000">
+                    </div>
+                </div>
+                
+                <div class="input-group-row">
+                    <div>
+                        <span class="input-label">Email Address</span>
+                        <input type="email" placeholder="example@gmail.com">
+                    </div>
+                </div>
+
+                <div class="rating-section">
+                    <p>Share your experience in scaling</p>
+                    
+                    <div class="emojis">
+                        <div class="emoji-option" style="opacity: 1;">
+                            😟
+                            <div class="emoji-label">Worst</div>
+                        </div>
+                        <div class="emoji-option">
+                            🙁
+                            <div class="emoji-label">Not Good</div>
+                        </div>
+                        <div class="emoji-option">
+                            😐
+                            <div class="emoji-label">Fine</div>
+                        </div>
+                        <div class="emoji-option">
+                            🙂
+                            <div class="emoji-label">Good</div>
+                        </div>
+                        <div class="emoji-option">
+                            😃
+                            <div class="emoji-label">Very Good</div>
+                        </div>
+                    </div>
+                    
+                    <input type="range" min="1" max="5" value="1" class="range-slider">
+                </div>
+                
+                <textarea class="comment-box" placeholder="Add your comments..."></textarea>
+                
+                <a href="/index.html"><div type="submit" class="submit-button">SUBMIT</div></a>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

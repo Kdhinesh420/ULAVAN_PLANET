@@ -1,0 +1,146 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url(/assets/032db963-22f6-4a01-8d4e-a4efcb8e5c4c.webp);
+    /* Green farm-like gradient */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+}
+
+.signup-container {
+    background: rgba(0, 0, 0, 0.445);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    width: 80%;
+    max-width: 500px;
+    height: 50%;
+    text-align: center;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.signup-container h2 {
+    margin-bottom: 10px;
+    color: #4CAF50;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.subtitle {
+    margin-bottom: 30px;
+    color: #666;
+    font-size: 16px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s;
+    box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #4CAF50;
+    outline: none;
+    box-shadow: 0 0 10px rgba(76, 175, 80, 0.3);
+}
+
+.form-row {
+    display: flex;
+    gap: 10px;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+.btn {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(90deg, #f9c74f, #ffd166);
+    border: none;
+    border-radius: 25px;
+    color: #2e7d32;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover {
+    background: linear-gradient(90deg, #ffd166, #f9c74f);
+    transform: scale(1.05);
+}
+
+.links {
+    margin-top: 20px;
+}
+
+.links a {
+    color: #4CAF50;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+
+.farm-icon {
+    justify-content: center;
+    align-items: center;
+
+
+    color: #4CAF50;
+    margin-bottom: 10px;
+}
+
+.terms {
+    font-size: 14px;
+    color: #666;
+    margin-top: 15px;
+}
+
+.terms a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+.terms a:hover {
+    text-decoration: underline;
+}

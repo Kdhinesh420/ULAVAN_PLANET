@@ -1,0 +1,100 @@
+/* பொதுவான ஸ்டைல்கள் */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* 🧭 நேவிகேஷன் பார் (Nav Bar) ஸ்டைல் */
+.navbar {
+    background-color: #6a805f; /* அடர்த்தியான பச்சை */
+    padding: 10px 40px;
+    display: flex;
+    justify-content: space-between; /* லோகோ ஒரு பக்கம், லிங்க்ஸ் ஒரு பக்கம் */
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo-circle {
+    width: 35px;
+    height: 35px;
+    background-color: white;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.logo-section h1 {
+    color: white;
+    font-size: 1.6em;
+    font-weight: normal;
+    margin: 0;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    margin-left: 15px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    border-radius: 5px;
+}
+
+.nav-links a:hover {
+    background-color: #8c9c7f; /* லேசான பச்சை ஹாவர் */
+}
+
+/* 🏠 முக்கிய உள்ளடக்கம் ஸ்டைல்கள் */
+.main-content {
+    padding: 20px 40px;
+    max-width: 1000px;
+    margin: 20px auto;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* படிவ ஸ்டைல்கள் (Form Styles - Address Page-க்கு) */
+input[type="text"], 
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+
+.input-group-row {
+    display: flex;
+    gap: 15px;
+}
+
+.input-group-row input, 
+.input-group-row select {
+    flex: 1;
+}
+
+.continue-button {
+    background-color: #000;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.1em;
+    margin-top: 20px;
+    width: 50%;
+    margin-left: 250px;
+    text-align: center;
+    text-decoration: none;
+}

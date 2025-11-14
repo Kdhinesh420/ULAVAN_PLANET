@@ -1,0 +1,313 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+  background :linear-gradient(rgba(122, 194, 122, 0.63) ,white);    color: #333;
+}
+
+/* --- Header Styling --- */
+.header {
+    background-color: #3ee37e83; /* Teal/Blue-Green color from image */
+    padding: 15px 5%;
+    display: flex;
+    align-items: center;
+    height: 60px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.circle-icon {
+    width: 30px;
+    height: 30px;
+    background-color: rgba(5, 109, 64, 0.703);
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.logo-text {
+    color: rgb(6, 5, 5);
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* --- Main Content Area --- */
+.content-area {
+    display: flex;
+    min-height: calc(100vh - 60px); /* Fill the screen below the header */
+}
+
+/* --- Left Sidebar (Filters) --- */
+.sidebar {
+    width: 250px;
+    background-color: #131815d0; /* Dark Green sidebar background */
+    color: white;
+    padding: 20px 20px 0 20px;
+    flex-shrink: 0;
+}
+
+.filter-heading {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #5a8563;
+    padding-bottom: 10px;
+}
+
+.filter-group {
+    padding: 15px 0;
+    border-bottom: 1px solid #5a8563;
+}
+
+.filter-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    color: #b7ffc7; /* Light green for titles */
+}
+
+.expandable-filter .filter-header {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+/* Brands Filter Specific Styles */
+.brands-filter {
+    padding-bottom: 0; /* Remove bottom padding for seamless look */
+    border-bottom: none;
+}
+.brands-filter .filter-header {
+    margin-bottom: 15px;
+}
+
+.search-box {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 8px 30px 8px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: white;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+.search-box .fa-search {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #555;
+    cursor: pointer;
+}
+
+.checkbox-list {
+    margin-bottom: 15px;
+}
+
+.checkbox-item {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.checkbox-item input[type="checkbox"] {
+    margin-right: 10px;
+    /* Custom styling for checkbox if needed */
+}
+
+/* Price Filter Specific Styles */
+.price-filter .range-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.price-filter .price-input {
+    width: 80px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    text-align: center;
+    color: #333;
+}
+
+.price-filter .separator {
+    font-weight: bold;
+    color: white;
+}
+
+.range-slider-placeholder {
+    height: 5px;
+    background-color: #5a8563;
+    border-radius: 3px;
+    margin-top: 15px;
+}
+
+.simple-filter {
+    padding-top: 20px;
+}
+
+
+/* --- Right Content (Product Grid) --- */
+.product-grid-container {
+    flex-grow: 1;
+    padding: 30px;
+  background :linear-gradient(rgba(122, 194, 122, 0.63) ,white);}
+
+.product-grid {
+    display: grid;
+    /* Responsive grid: 3 columns for desktop, less for mobile */
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); 
+    gap: 20px;
+}
+
+.product-card {
+    background-color: #f7f7f7;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.product-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.card-image-box {
+    position: relative;
+    height: 180px; 
+    overflow: hidden;
+    background-color: white; 
+}
+
+.product-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.heart-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #777;
+    background-color: white;
+    padding: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+    /* z-index: 10; */
+}
+
+:hover.heart-icon{
+    color: red;
+}
+.sale-tag {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #ff4500; /* Red color */
+    color: white;
+    padding: 2px 6px;
+    font-size: 0.7rem;
+    font-weight: bold;
+    border-radius: 3px;
+    z-index: 10;
+}
+
+.card-details {
+    padding: 15px;
+}
+
+.brand-logo-mini {
+    height: 15px;
+    width: auto;
+    /* Placeholder for the small Ulavan logo image */
+    display: block; 
+    margin-bottom: 5px;
+}
+
+.rating-stars {
+    color: gold;
+    font-size: 0.8rem;
+    margin-bottom: 5px;
+}
+
+.product-name {
+    font-size: 0.9rem;
+    line-height: 1.3;
+    color: #555;
+    height: 35px; /* Fixed height for product name */
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.price-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.current-price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ff4500; /* Red price */
+}
+
+.old-price {
+    font-size: 0.9rem;
+    text-decoration: line-through;
+    color: #999;
+    margin-left: 5px;
+    flex-grow: 1; /* Push the add icon to the right */
+}
+
+.add-icon {
+    font-size: 1.8rem;
+    color: #2E8B57; /* Green Add button */
+    cursor: pointer;
+}
+
+/* --- Responsiveness --- */
+@media (max-width: 900px) {
+    .sidebar {
+        width: 200px; /* Reduce sidebar width on smaller screens */
+    }
+    .product-grid {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .content-area {
+        flex-direction: column; /* Stack filters and products vertically */
+    }
+    .sidebar {
+        width: 100%;
+        padding: 15px;
+    }
+    .product-grid-container {
+        padding: 15px;
+    }
+    .product-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+}
