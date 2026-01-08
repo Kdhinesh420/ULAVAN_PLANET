@@ -182,7 +182,7 @@ header {
   position: relative;
   height: 480px;
   width: 100%;
-  background-image: linear-gradient(rgba(46, 125, 50, 0.2), rgba(0, 0, 0, 0.4)), url("..//assets/images/Gemini_Generated_Image_uevv1ruevv1ruevv.png");
+  background-image: linear-gradient(rgba(46, 125, 50, 0.2), rgba(0, 0, 0, 0.4)), url("../assets/images/Gemini_Generated_Image_uevv1ruevv1ruevv.png");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
