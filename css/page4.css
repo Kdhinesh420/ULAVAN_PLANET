@@ -19,18 +19,16 @@ body {
     line-height: 1.6;
 }
 
-/* --- Header Styling (Matches Index) --- */
+/* --- Header Styling --- */
 .header {
     background-color: #f1f8e9;
-    /* Fresh Light Mint */
-    padding: 15px 5%;
+    padding: 0 5%;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    height: 70px;
-    /* Slightly taller for grandeur */
+    height: 80px;
     box-shadow: 0 4px 20px rgba(46, 125, 50, 0.15);
     border-top: 5px solid #1b5e20;
-    /* Dark contrast border */
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -39,43 +37,71 @@ body {
 .logo-container {
     display: flex;
     align-items: center;
-    gap: 12px;
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-decoration: none;
+    color: inherit;
 }
 
 .circle-icon {
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     object-fit: cover;
-    border: 2px solid #ffca28;
-    /* Sun yellow border */
+    border: 2px solid #1b5e20;
+    transition: transform 0.3s ease;
+}
+
+.logo-link:hover .circle-icon {
+    transform: scale(1.1);
 }
 
 .logo-text {
     color: #1b5e20;
-    /* Dark Green */
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     font-weight: 800;
     letter-spacing: 0.5px;
 }
 
-/* Back Link Styling */
-.header a {
-    margin-left: auto;
-    /* Push to right */
-    text-decoration: none;
-    color: #33691e;
-    font-weight: 600;
-    font-size: 0.9rem;
-    background: #c8e6c9;
-    padding: 8px 16px;
-    border-radius: 20px;
-    transition: all 0.3s;
+.navbar {
+    display: flex;
+    gap: 30px;
 }
 
-.header a:hover {
-    background: #1b5e20;
-    color: white;
+.navbar a {
+    text-decoration: none;
+    color: #1b5e20;
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    padding: 5px 0;
+    transition: color 0.3s;
+}
+
+.navbar a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: -2px;
+    left: 0;
+    background-color: #ffca28;
+    transition: width 0.3s;
+    border-radius: 2px;
+}
+
+.navbar a:hover {
+    color: #388e3c;
+}
+
+.navbar a:hover::after {
+    width: 100%;
 }
 
 /* --- Main Content Area --- */
