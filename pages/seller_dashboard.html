@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Seller Dashboard - ULAVAN PLANET</title>
+    <meta name="description" content="Manage your seller account, view orders, and track your sales on ULAVAN PLANET">
+    <link rel="stylesheet" href="../css/seller_dashboard.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+</head>
+
+<body>
+
+    <header>
+        <div class="top-bar">
+            <div class="logo" style="align-items: center;display: flex; gap: 20px;">
+                <img src="../assets/images/logoooo.png" alt="Ulavan Planet Logo" height="30px"> <strong>ULAVAN
+                    PLANET</strong>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search orders, products ....">
+                <button>🔍</button>
+            </div>
+            <div class="user-links">
+                <a href="./login.html">👤 Logout</a>
+                <a href="../index.html">🏠 Home</a>
+            </div>
+        </div>
+
+        <nav class="nav-menu">
+            <a href="../index.html">Home</a>
+            <a href="./page2.html">Shop All</a>
+            <a href="./page3.html">About Us</a>
+            <a href="./page4.html">Brands</a>
+            <a href="./best_selling_page.html">Best Sellers</a>
+            <a href="./feedback.html">Feedback</a>
+            <a href="./report.html">Support</a>
+            <a href="./seller_dashboard.html" class="active">Seller Dashboard</a>
+        </nav>
+    </header>
+
+    <main class="dashboard-container">
+        <!-- Seller Profile Section -->
+        <div class="seller-profile-section">
+            <div class="profile-card">
+                <div class="profile-header">
+                    <div class="seller-avatar">
+                        <img src="../assets/images/logoooo.png" alt="Seller Avatar" id="sellerAvatar">
+                        <div class="online-status"></div>
+                    </div>
+                    <div class="seller-info">
+                        <h1 id="sellerName">Green Valley Farms</h1>
+                        <p class="seller-email"><i class="fas fa-envelope"></i> greenvalley@example.com</p>
+                        <p class="seller-phone"><i class="fas fa-phone"></i> +91 98765 43210</p>
+                        <div class="seller-badges">
+                            <span class="badge verified"><i class="fas fa-check-circle"></i> Verified Seller</span>
+                            <span class="badge premium"><i class="fas fa-crown"></i> Premium</span>
+                            <span class="badge rating"><i class="fas fa-star"></i> 4.8 Rating</span>
+                        </div>
+                    </div>
+                    <div class="profile-actions">
+                        <button class="btn-edit" id="editProfileBtn">
+                            <i class="fas fa-edit"></i> Edit Profile
+                        </button>
+                    </div>
+                </div>
+
+                <div class="seller-details-grid">
+                    <div class="detail-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <label>Business Address</label>
+                            <p id="sellerAddress">123 Farm Road, Green Valley, Tamil Nadu - 600001</p>
+                        </div>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-calendar-alt"></i>
+                        <div>
+                            <label>Member Since</label>
+                            <p id="memberSince">January 2023</p>
+                        </div>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-store"></i>
+                        <div>
+                            <label>Store Name</label>
+                            <p id="storeName">Green Valley Organic Store</p>
+                        </div>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-certificate"></i>
+                        <div>
+                            <label>Business License</label>
+                            <p id="businessLicense">GVF-2023-TN-001</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Statistics Section -->
+        <div class="stats-section">
+            <div class="stat-card">
+                <div class="stat-icon" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                    <i class="fas fa-shopping-cart"></i>
+                </div>
+                <div class="stat-info">
+                    <h3>Total Orders</h3>
+                    <p class="stat-number">248</p>
+                    <span class="stat-change positive"><i class="fas fa-arrow-up"></i> 12% this month</span>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                    <i class="fas fa-clock"></i>
+                </div>
+                <div class="stat-info">
+                    <h3>Pending Orders</h3>
+                    <p class="stat-number">15</p>
+                    <span class="stat-change neutral">Needs attention</span>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                    <i class="fas fa-rupee-sign"></i>
+                </div>
+                <div class="stat-info">
+                    <h3>Total Revenue</h3>
+                    <p class="stat-number">₹1,24,500</p>
+                    <span class="stat-change positive"><i class="fas fa-arrow-up"></i> 8% this month</span>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">
+                    <i class="fas fa-box"></i>
+                </div>
+                <div class="stat-info">
+                    <h3>Products Listed</h3>
+                    <p class="stat-number">42</p>
+                    <span class="stat-change positive"><i class="fas fa-arrow-up"></i> 5 new</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Orders Section -->
+        <div class="orders-section">
+            <div class="section-header">
+                <h2><i class="fas fa-list-alt"></i> Recent Orders</h2>
+                <div class="filter-controls">
+                    <select id="orderFilter" class="filter-select">
+                        <option value="all">All Orders</option>
+                        <option value="pending">Pending</option>
+                        <option value="processing">Processing</option>
+                        <option value="shipped">Shipped</option>
+                        <option value="delivered">Delivered</option>
+                        <option value="cancelled">Cancelled</option>
+                    </select>
+                    <input type="text" placeholder="Search orders..." class="search-input" id="orderSearch">
+                </div>
+            </div>
+
+            <div class="orders-table-container">
+                <table class="orders-table">
+                    <thead>
+                        <tr>
+                            <th>Order ID</th>
+                            <th>Customer</th>
+                            <th>Product</th>
+                            <th>Quantity</th>
+                            <th>Amount</th>
+                            <th>Date</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="ordersTableBody">
+                        <tr class="order-row">
+                            <td class="order-id">#ORD-2401</td>
+                            <td>
+                                <div class="customer-info">
+                                    <i class="fas fa-user-circle"></i>
+                                    <span>Rajesh Kumar</span>
+                                </div>
+                            </td>
+                            <td>Premium Zinnia Seeds</td>
+                            <td>2 packs</td>
+                            <td class="amount">₹160</td>
+                            <td>11 Jan 2026</td>
+                            <td><span class="status-badge pending">Pending</span></td>
+                            <td>
+                                <button class="action-btn view" onclick="viewOrder('ORD-2401')">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                                <button class="action-btn process" onclick="processOrder('ORD-2401')">
+                                    <i class="fas fa-check"></i>
+                                </button>
+                            </td>
+                        </tr>
+
+                        <tr class="order-row">
+                            <td class="order-id">#ORD-2400</td>
+                            <td>
+                                <div class="customer-info">
+                                    <i class="fas fa-user-circle"></i>
+                                    <span>Priya Sharma</span>
+                                </div>
+                            </td>
+                            <td>Yellow Marigold Seeds</td>
+                            <td>3 packs</td>
+                            <td class="amount">₹1,470</td>
+                            <td>10 Jan 2026</td>
+                            <td><span class="status-badge processing">Processing</span></td>
+                            <td>
+                                <button class="action-btn view" onclick="viewOrder('ORD-2400')">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                                <button class="action-btn ship" onclick="shipOrder('ORD-2400')">
+                                    <i class="fas fa-shipping-fast"></i>
+                                </button>
+                            </td>
+                        </tr>
+
+                        <tr class="order-row">
+                            <td class="order-id">#ORD-2399</td>
+                            <td>
+                                <div class="customer-info">
+                                    <i class="fas fa-user-circle"></i>
+                                    <span>Arun Patel</span>
+                                </div>
+                            </td>
+                            <td>Hybrid Tomato Seeds</td>
+                            <td>5 packs</td>
+                            <td class="amount">₹3,300</td>
+                            <td>09 Jan 2026</td>
+                            <td><span class="status-badge shipped">Shipped</span></td>
+                            <td>
+                                <button class="action-btn view" onclick="viewOrder('ORD-2399')">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                                <button class="action-btn track" onclick="trackOrder('ORD-2399')">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </button>
+                            </td>
+                        </tr>
+
+                        <tr class="order-row">
+                            <td class="order-id">#ORD-2398</td>
+                            <td>
+                                <div class="customer-info">
+                                    <i class="fas fa-user-circle"></i>
+                                    <span>Lakshmi Reddy</span>
+                                </div>
+                            </td>
+                            <td>Sweet Dragon Fruit Seeds</td>
+                            <td>1 pack</td>
+                            <td class="amount">₹150</td>
+                            <td>08 Jan 2026</td>
+                            <td><span class="status-badge delivered">Delivered</span></td>
+                            <td>
+                                <button class="action-btn view" onclick="viewOrder('ORD-2398')">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                                <button class="action-btn invoice" onclick="downloadInvoice('ORD-2398')">
+                                    <i class="fas fa-file-invoice"></i>
+                                </button>
+                            </td>
+                        </tr>
+
+                        <tr class="order-row">
+                            <td class="order-id">#ORD-2397</td>
+                            <td>
+                                <div class="customer-info">
+                                    <i class="fas fa-user-circle"></i>
+                                    <span>Vijay Menon</span>
+                                </div>
+                            </td>
+                            <td>Lotus Seeds</td>
+                            <td>2 packs</td>
+                            <td class="amount">₹1,968</td>
+                            <td>07 Jan 2026</td>
+                            <td><span class="status-badge delivered">Delivered</span></td>
+                            <td>
+                                <button class="action-btn view" onclick="viewOrder('ORD-2397')">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                                <button class="action-btn invoice" onclick="downloadInvoice('ORD-2397')">
+                                    <i class="fas fa-file-invoice"></i>
+                                </button>
+                            </td>
+                        </tr>
+
+                        <tr class="order-row">
+                            <td class="order-id">#ORD-2396</td>
+                            <td>
+                                <div class="customer-info">
+                                    <i class="fas fa-user-circle"></i>
+                                    <span>Anita Singh</span>
+                                </div>
+                            </td>
+                            <td>Poppy Mix Seeds</td>
+                            <td>4 packs</td>
+                            <td class="amount">₹3,540</td>
+                            <td>06 Jan 2026</td>
+                            <td><span class="status-badge pending">Pending</span></td>
+                            <td>
+                                <button class="action-btn view" onclick="viewOrder('ORD-2396')">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                                <button class="action-btn process" onclick="processOrder('ORD-2396')">
+                                    <i class="fas fa-check"></i>
+                                </button>
+                            </td>
+                        </tr>
+
+                        <tr class="order-row">
+                            <td class="order-id">#ORD-2395</td>
+                            <td>
+                                <div class="customer-info">
+                                    <i class="fas fa-user-circle"></i>
+                                    <span>Karthik Iyer</span>
+                                </div>
+                            </td>
+                            <td>Chrysanthemum Mix Seeds</td>
+                            <td>3 packs</td>
+                            <td class="amount">₹1,950</td>
+                            <td>05 Jan 2026</td>
+                            <td><span class="status-badge shipped">Shipped</span></td>
+                            <td>
+                                <button class="action-btn view" onclick="viewOrder('ORD-2395')">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                                <button class="action-btn track" onclick="trackOrder('ORD-2395')">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </button>
+                            </td>
+                        </tr>
+
+                        <tr class="order-row">
+                            <td class="order-id">#ORD-2394</td>
+                            <td>
+                                <div class="customer-info">
+                                    <i class="fas fa-user-circle"></i>
+                                    <span>Deepa Nair</span>
+                                </div>
+                            </td>
+                            <td>Pansy Mix Seeds</td>
+                            <td>2 packs</td>
+                            <td class="amount">₹1,200</td>
+                            <td>04 Jan 2026</td>
+                            <td><span class="status-badge cancelled">Cancelled</span></td>
+                            <td>
+                                <button class="action-btn view" onclick="viewOrder('ORD-2394')">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                                <button class="action-btn refund" onclick="processRefund('ORD-2394')">
+                                    <i class="fas fa-undo"></i>
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="pagination">
+                <button class="page-btn" disabled><i class="fas fa-chevron-left"></i> Previous</button>
+                <span class="page-info">Page 1 of 31</span>
+                <button class="page-btn">Next <i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+
+        <!-- Quick Actions Section -->
+        <div class="quick-actions-section">
+            <h2><i class="fas fa-bolt"></i> Quick Actions</h2>
+            <div class="actions-grid">
+                <button class="action-card">
+                    <i class="fas fa-plus-circle"></i>
+                    <span>Add New Product</span>
+                </button>
+                <button class="action-card">
+                    <i class="fas fa-chart-line"></i>
+                    <span>View Analytics</span>
+                </button>
+                <button class="action-card">
+                    <i class="fas fa-tags"></i>
+                    <span>Manage Inventory</span>
+                </button>
+                <button class="action-card">
+                    <i class="fas fa-percentage"></i>
+                    <span>Create Discount</span>
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <section class="extended-footer">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h3>Ulavan Planet</h3>
+                <p>Your one-stop shop for fresh, organic, and direct-from-farmer products. Empowering farmers,
+                    nourishing communities.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="./page4.html">Brands</a></li>
+                    <li><a href="./page2.html">Seed Collection</a></li>
+                    <li><a href="./page4.html">Crop Protection</a></li>
+                    <li><a href="./page2.html">Fruits & Vegetables</a></li>
+                    <li><a href="./Track.html">Track Order</a></li>
+                    <li><a href="./page3.html">About Us Our Story</a></li>
+                    <li><a href="./report.html">Contact Support</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Seller Resources</h3>
+                <ul>
+                    <li><a href="./seller_dashboard.html">Seller Dashboard</a></li>
+                    <li><a href="#">Seller Guidelines</a></li>
+                    <li><a href="#">Payment Information</a></li>
+                    <li><a href="#">Shipping Policies</a></li>
+                    <li><a href="#">Seller Support</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Connect With Us</h3>
+                <p>Follow us on social media for updates and offers!</p>
+                <div class="social-icons">
+                    <a href="https://facebook.com" target="_blank">Facebook</a> |
+                    <a href="https://instagram.com" target="_blank">Instagram</a> |
+                    <a href="https://twitter.com" target="_blank">Twitter</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 Ulavan Planet | Designed with 💚 for Farmers</p>
+    </footer>
+
+    <script>
+        // Order management functions
+        function viewOrder(orderId) {
+            alert(`Viewing details for order ${orderId}`);
+            // In real application, this would open a modal or navigate to order details page
+        }
+
+        function processOrder(orderId) {
+            if (confirm(`Mark order ${orderId} as processing?`)) {
+                showNotification(`Order ${orderId} is now being processed`, 'success');
+                // Update order status in backend
+            }
+        }
+
+        function shipOrder(orderId) {
+            if (confirm(`Mark order ${orderId} as shipped?`)) {
+                showNotification(`Order ${orderId} has been marked as shipped`, 'success');
+                // Update order status in backend
+            }
+        }
+
+        function trackOrder(orderId) {
+            alert(`Opening tracking information for order ${orderId}`);
+            // In real application, this would show tracking details
+        }
+
+        function downloadInvoice(orderId) {
+            showNotification(`Downloading invoice for order ${orderId}`, 'info');
+            // In real application, this would download the invoice PDF
+        }
+
+        function processRefund(orderId) {
+            if (confirm(`Process refund for order ${orderId}?`)) {
+                showNotification(`Refund initiated for order ${orderId}`, 'success');
+                // Process refund in backend
+            }
+        }
+
+        // Filter orders
+        document.getElementById('orderFilter').addEventListener('change', function (e) {
+            const filterValue = e.target.value;
+            const rows = document.querySelectorAll('.order-row');
+
+            rows.forEach(row => {
+                if (filterValue === 'all') {
+                    row.style.display = '';
+                } else {
+                    const status = row.querySelector('.status-badge').textContent.toLowerCase();
+                    row.style.display = status.includes(filterValue) ? '' : 'none';
+                }
+            });
+        });
+
+        // Search orders
+        document.getElementById('orderSearch').addEventListener('input', function (e) {
+            const searchTerm = e.target.value.toLowerCase();
+            const rows = document.querySelectorAll('.order-row');
+
+            rows.forEach(row => {
+                const text = row.textContent.toLowerCase();
+                row.style.display = text.includes(searchTerm) ? '' : 'none';
+            });
+        });
+
+        // Notification system
+        function showNotification(message, type) {
+            const notification = document.createElement('div');
+            notification.className = `notification ${type}`;
+            notification.innerHTML = `
+                <i class="fas fa-${type === 'success' ? 'check-circle' : 'info-circle'}"></i>
+                <span>${message}</span>
+            `;
+            document.body.appendChild(notification);
+
+            setTimeout(() => {
+                notification.classList.add('show');
+            }, 100);
+
+            setTimeout(() => {
+                notification.classList.remove('show');
+                setTimeout(() => notification.remove(), 300);
+            }, 3000);
+        }
+
+        // Edit profile button
+        document.getElementById('editProfileBtn').addEventListener('click', function () {
+            showNotification('Edit profile functionality coming soon!', 'info');
+        });
+    </script>
+
+</body>
+
+</html>
